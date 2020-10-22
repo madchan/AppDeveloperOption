@@ -1,0 +1,36 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="线路">
+
+        <ListPreference
+            app:entries="@array/app_status"
+            app:entryValues="@array/app_status_values"
+            app:key="app_status"
+            app:title="切换环境" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="日志">
+
+        <SwitchPreference
+            app:key="log_debuggable"
+            app:summaryOff="已关闭，日志记录将只写入文件"
+            app:summaryOn="已开启，日志记录将同时允许输出到屏幕"
+            app:title="开启日志调试" />
+
+        <Preference
+            app:key="logcat_page"
+            app:title="进入日志调试页" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="内置浏览器">
+
+        <EditTextPreference
+            app:key="dummy_app_version"
+            app:title="修改应用版本"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
